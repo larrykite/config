@@ -1,0 +1,73 @@
+[larry]
+  kite = Larry Kite
+[user]
+	name = Larry Kite
+	email = larry@skytreecorp.com
+[diff]
+        tool = diffuse
+[difftool]
+        prompt = false
+[difftool "diffuse"]
+          cmd = diffuse \"$LOCAL\" \"$REMOTE\"
+[color]
+  ui = auto
+[color  "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color  "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color  "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[color]
+  ui = true
+[color "diff"]
+  whitespace = red reverse
+[core]
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	editor = emacs
+ [alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    dc = diff --cached
+    lg = log -p
+    gr = log --graph --full-history --all --color --date=short --pretty=tformat:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[0m"
+    lolc = log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
+    lolb = log --graph --full-history --all --pretty=format:"%h%x09%d%x20%s"
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    ls = ls-files
+    whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
+    whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+    logb = log --oneline --graph --all
+    new = !sh -c 'git log $1@{1}..$1@{0} "$@"'      
+    
+    # Show files ignored by git:
+    ign = ls-files -o -i --exclude-standard
+    lg = log --graph --pretty=format:'%Cred%h%Creset %ad %s %C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --date=short
+     hist = log --graph --full-history --all --pretty=format:'%Cred%h%Creset %ad %s %C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --date=short
+
+
+
+
+
+
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 1089x818+52+30
+	main-window-view = HistoryView
+	history-view-vpane-position = 516
+	file-view-vpane-position = 753
+[github]
+	user = larrykite
+	token = 77fda79e571a3efdabbceea284b5b5b4
+[merge]
+	tool = meld
