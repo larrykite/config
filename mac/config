@@ -1,0 +1,25 @@
+Host abba
+ HostName 216.162.34.118
+ User larry
+Host nirvana.local
+ HostName 192.168.1.26
+ User larry
+Host metallica.local
+ HostName 192.168.10.10
+ User larry
+Host metallica
+ HostName 64.62.181.83
+ Port 2210
+ User larry
+Host nirvana
+ HostName 50.0.45.240
+ Port 2223
+ User larry
+Host queen
+ HostName 64.62.181.83
+ Port 2218
+ User larry
+Host queen.local
+ HostName 192.168.10.18
+ Port 22
+ User larry
